@@ -28,8 +28,9 @@ class Food:
     
     def __init__(self):
         
-        x = random.randint(0, (GAME_WIDTH/SPACE_SIZE) -1 ) * SPACE_SIZE
-        y = random.randint(0, (GAME_HEIGHT/SPACE_SIZE) -1 ) * SPACE_SIZE
+        #when i use "x = random.randint(0, WIDTH / SPACE_SIZE) * SPACE_SIZE" the code failure
+        x = random.randint(0, 13) * SPACE_SIZE
+        y = random.randint(0, 13) * SPACE_SIZE
         
         self.coordinates = [x, y]
         
