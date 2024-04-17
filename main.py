@@ -21,7 +21,7 @@ class Snake:
             self.coordinates.append([0, 0])
         
         for x, y in self.coordinates:
-            square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
+            square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tags="snake")
             self.squares.append(square)
         
 class Food:
@@ -34,7 +34,7 @@ class Food:
         
         self.coordinates = [x, y]
         
-        canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR )
+        canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tags="food" )
         
         
 def next_turn():
